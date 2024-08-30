@@ -57,5 +57,5 @@ conteudo = response.text
 
 json_resultado = json.loads(conteudo)
 for avaliacao in json_resultado:
-  with open(f"analises/{avaliacao["reviewer_id"]}.json", "w", encoding="utf-8") as arquivo:
+  with open(f"analises-reviews/{avaliacao["reviewer_id"]}.json", "w", encoding="utf-8") as arquivo:
     arquivo.write(json.dumps(avaliacao))
