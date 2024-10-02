@@ -1,7 +1,10 @@
+from dotenv import load_dotenv
 import os
 import smtplib
 from email.message import EmailMessage
 import pandas as pd
+
+load_dotenv()
 
 def carrega_csv(nome_do_arquivo):
     try:
@@ -23,7 +26,7 @@ def carrega_arquivos(diretorio):
 
 sender = "Suporte Hare Express <suporte@hare-express.com>"
 
-reviews = carrega_csv("dados/reviews-entrega-MercadoAgil.csv")
+reviews = carrega_csv("reviews-entrega-MercadoAgil.csv")
 reviews = reviews[['reviewer_id', 'reviewer_name', 'reviewer_email', 'review_text']]
 
 emails_reviews = carrega_arquivos("emails-reviews")

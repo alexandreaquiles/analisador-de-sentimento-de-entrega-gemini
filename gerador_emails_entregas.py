@@ -81,10 +81,10 @@ def gera_email(analise):
 
   return resposta.text
 
-reviews = carrega_csv("dados/reviews-entrega-MercadoAgil.csv")
+reviews = carrega_csv("reviews-entrega-MercadoAgil.csv")
 reviews = reviews[['reviewer_id', 'reviewer_name', 'reviewer_email', 'review_text']]
 
-lista_analises = carrega_arquivos_json("analise-reviews")
+lista_analises = carrega_arquivos_json("analises-reviews")
 
 i = 0
 for analise in lista_analises:
